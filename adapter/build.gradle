@@ -1,0 +1,19 @@
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+
+dependencies {
+    implementation project(':port')
+    implementation project(':core:common')
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+

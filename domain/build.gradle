@@ -1,0 +1,22 @@
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    annotationProcessor 'org.projectlombok:lombok'
+       implementation project(':port')
+    implementation project(':core:common')
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+

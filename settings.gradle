@@ -1,4 +1,7 @@
 rootProject.name = 'hexagonal-example'
 
-include 'core'
-include 'comment'
+include 'core:common'
+include 'core:config'
+include 'port'
+include 'adapter'
+include 'domain'

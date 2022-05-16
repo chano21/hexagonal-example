@@ -1,0 +1,15 @@
+bootJar {
+    enabled = true
+}
+jar {
+    enabled = true
+}
+
+dependencies {
+
+}
+
+bootRun {
+    String activeProfile = System.properties['spring.profiles.active']
+    systemProperty "spring.profiles.active", activeProfile
+}

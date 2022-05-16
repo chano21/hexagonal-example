@@ -1,0 +1,23 @@
+hexagon:
+  datasource:
+    password: 1234
+    username: root
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3303/hexagon?useUnicode=true&charaterEncoding=utf-8&serverTimezone=UTC
+  hibernate:
+    showSql: 'true'
+    formatSql: 'true'
+    sqlComments: 'true'
+    ddlAuto: update
+    dialect: org.hibernate.dialect.MySQL5Dialect
+  mongodb:
+    username: root
+    password: 1234
+    database: hexagon
+    host: mongodb://localhost:27017/
+logging:
+  level:
+    org:
+      hibernate:
+        type: debug
+    root: debug
