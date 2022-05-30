@@ -1,4 +1,4 @@
-package com.example.adapter.in.adapter;
+package com.example.adapter.in;
 
 import com.example.port.command.MemberCommand;
 import com.example.port.in.MemberInPort;

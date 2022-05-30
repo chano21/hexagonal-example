@@ -53,8 +53,19 @@ public class HexagonProperties {
         String sqlComments;
         String ddlAuto;
         String dialect;
-
     }
+
+    @Getter
+    @Setter
+    @ToString
+    @Configuration
+    @ConfigurationProperties(prefix = "hexagon.redis")
+    public static class RedisProperties {
+        String host;
+        int port;
+    }
+
+
 
 
 

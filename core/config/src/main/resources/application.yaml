@@ -15,6 +15,10 @@ hexagon:
     password: 1234
     database: hexagon
     host: mongodb://localhost:27017/
+  redis:
+    host: localhost
+    port: 6399
+
 logging:
   level:
     org:
