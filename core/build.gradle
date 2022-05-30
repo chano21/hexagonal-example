@@ -6,13 +6,9 @@ jar {
 }
 
 dependencies {
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
-    implementation 'mysql:mysql-connector-java'
-       implementation project(':adapter')
+    implementation project(':adapter')
     implementation project(':domain')
-
 }
 
 bootRun {

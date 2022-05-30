@@ -19,9 +19,9 @@ import java.util.HashMap;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(entityManagerFactoryRef = "hexagonEntityManager", transactionManagerRef = "hexagonTransactionManager",
-        basePackages = {"com.example.adapter.out.adapter.db.repository"})
+        basePackages = {"com.example.adapter.out.repository"})
 @RequiredArgsConstructor
-@EntityScan(value = {"com.example.adapter.out.adapter.db.*"})
+@EntityScan(value = {"com.example.adapter.out.entity"})
 public class DatabaseConfig {
 
 private final HexagonProperties.DatabaseProperties databaseProperties;
@@ -46,7 +46,7 @@ private final HexagonProperties.DatabaseProperties databaseProperties;
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         HashMap<String, Object> properties = new HashMap<>();
         localContainerEntityManagerFactoryBean.setDataSource(hexagonDataSource());
-        localContainerEntityManagerFactoryBean.setPackagesToScan(new String[] { "com.example.adapter.out.adapter.db.*"});
+        localContainerEntityManagerFactoryBean.setPackagesToScan(new String[] { "com.example.adapter.out.*"});
         localContainerEntityManagerFactoryBean.setJpaVendorAdapter(vendorAdapter);
         properties.put("hibernate.dialect", hibernateProperties.getDialect());
         properties.put("hibernate.format_sql",hibernateProperties.getFormatSql());
